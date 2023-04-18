@@ -1,17 +1,24 @@
 <div id="<%= dom_id clock %>">
   <p>
     <strong>Project:</strong>
-    <%= clock.project_id %>
+    <%= clock.project.name %>
   </p>
 
   <p>
     <strong>User:</strong>
-    <%= clock.user_id %>
+    <%= clock.user.nickname %>
   </p>
 
-    <p>
+  <p>
     <strong>Comment:</strong>
-    <%= clock.user.comment %>
+    <%= clock.comment %>
   </p>
+
+   <p>
+    <strong>Tempo:</strong>
+    <%= clock.tempo %>
+  </p>
+
+
 
 </div>
