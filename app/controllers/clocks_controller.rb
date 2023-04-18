@@ -22,6 +22,7 @@ class ClocksController < ApplicationController
   # POST /clocks or /clocks.json
   def create
     @clock = Clock.new(clock_params)
+    @clock.user_id = current_user.id
 
     respond_to do |format|
       if @clock.save
