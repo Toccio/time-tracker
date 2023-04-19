@@ -4,7 +4,7 @@
 
 <div id="projects">
   <% @projects.each do |project| %>
-    <%= render project %>
+  <p><strong>Project name: </strong><%= project.name %></p>
     <p>
       <%= link_to "Show this project", project %>
     </p>

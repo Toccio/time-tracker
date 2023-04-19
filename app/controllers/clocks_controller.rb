@@ -23,6 +23,7 @@ class ClocksController < ApplicationController
   def create
     @clock = Clock.new(clock_params)
     @clock.user_id = current_user.id
+    @clock.comment
 
     respond_to do |format|
       if @clock.save
@@ -66,6 +67,6 @@ class ClocksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def clock_params
-      params.require(:clock).permit(:project_id, :user_id)
+      params.require(:clock).permit(:name, :nickname, :comment, :tempo)
     end
 end
